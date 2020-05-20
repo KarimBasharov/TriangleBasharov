@@ -11,7 +11,12 @@ namespace TriangleBasharov
         public double a;
         public double b;
         public double c;
+        public double r;
 
+        public Triangle(double R)
+        {
+            r = R;
+        }
         public Triangle(double A, double B, double C)
         {
             a = A;
@@ -29,6 +34,17 @@ namespace TriangleBasharov
         public string outputC()
         {
             return Convert.ToString(c);
+        }
+        public string outputR()
+        {
+            return Convert.ToString(r);
+        }
+
+        public double Height()
+        {
+            double h = 0;
+            h = b * c / 2 * r;
+            return r;
         }
         public double Perimeter()
         {
@@ -64,6 +80,14 @@ namespace TriangleBasharov
             { return c; }
             set
             { c = value; }
+        }
+
+        public double GetSetR
+        {
+            get
+            { return r; }
+            set
+            { r = value; }
         }
         public bool ExistTriangle
         {
