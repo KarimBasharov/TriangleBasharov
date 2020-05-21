@@ -8,12 +8,12 @@ namespace TriangleBasharov
 {
     class Triangle
     {
-        public double a;
-        public double b;
-        public double c;
-        public double r;
+        public double a; // первая сторона
+        public double b; // вторая сторона
+        public double c; // третья сторона
+        public double r; // радиус описанной окружности
 
-        public Triangle(double R)
+        public Triangle(double R) // конструктор. Создаем с заданным радиусом.
         {
             r = R;
         }
@@ -35,12 +35,12 @@ namespace TriangleBasharov
         {
             return Convert.ToString(c);
         }
-        public string outputR()
+        public string outputR() // выводим r - радиус.
         {
             return Convert.ToString(r);
         }
 
-        public double Height()
+        public double Height() //нахождение высоты треугольника через радиус.
         {
             double h = 0;
             h = b * c / 2 * r;
@@ -82,7 +82,7 @@ namespace TriangleBasharov
             { c = value; }
         }
 
-        public double GetSetR
+        public double GetSetR // это свойство позволяет установить или же изменить значение радиуса r.
         {
             get
             { return r; }
