@@ -33,7 +33,7 @@ namespace TriangleBasharov
             a = Convert.ToDouble(txtA.Text);
             b = Convert.ToDouble(txtB.Text);
             c = Convert.ToDouble(txtC.Text);
-            r = Convert.ToDouble(txtD.Text);
+            r = Convert.ToDouble(txtD.Text); 
             Triangle triangle = new Triangle(a, b, c, r);
             listView1.Items.Add("Сторона a");
             listView1.Items.Add("Сторона b");
@@ -56,6 +56,15 @@ namespace TriangleBasharov
             if (a == b && b == c && c == b) { listView1.Items[8].SubItems.Add("Равносторонний");}
             else if (b == c) { listView1.Items[8].SubItems.Add("Равнобедренный"); }
             else { listView1.Items[8].SubItems.Add("Разносторонний"); }
+        }
+
+        private void Run_button_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) //Если нажать правой кнопкой мыши, то откроется Форма2
+            {
+                Form2 form2 = new Form2();
+                form2.Show();
+            }
         }
     }
 }
