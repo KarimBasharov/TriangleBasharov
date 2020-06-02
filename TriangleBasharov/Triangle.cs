@@ -13,12 +13,13 @@ namespace TriangleBasharov
         public double c; // третья сторона
         public double r; // радиус описанной окружности
 
-        public Triangle(double R) // конструктор. Создаем с заданным радиусом.
+        public Triangle() // конструктор. Создаем с заданным радиусом.
+        {
+            
+        }
+        public Triangle(double A, double B, double C, double R)
         {
             r = R;
-        }
-        public Triangle(double A, double B, double C)
-        {
             a = A;
             b = B;
             c = C;
@@ -44,7 +45,7 @@ namespace TriangleBasharov
         {
             double h = 0;
             h = b * c / 2 * r;
-            return r;
+            return h;
         }
         public double Perimeter()
         {
@@ -95,8 +96,7 @@ namespace TriangleBasharov
             {
                 if ((a < b + c) && (b < a + c) && (c < a + b))
                     return false;
-                else return true;
-            }
+                else return true;            }
         }
     }
 }

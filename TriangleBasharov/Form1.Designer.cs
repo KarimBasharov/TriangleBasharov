@@ -34,10 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtA = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtD = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +95,11 @@
             this.columnHeader1.Text = "Поле";
             this.columnHeader1.Width = 136;
             // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Значение";
+            this.columnHeader2.Width = 118;
+            // 
             // txtA
             // 
             this.txtA.Location = new System.Drawing.Point(383, 134);
@@ -115,16 +121,19 @@
             this.txtC.Size = new System.Drawing.Size(100, 22);
             this.txtC.TabIndex = 6;
             // 
-            // columnHeader2
+            // txtD
             // 
-            this.columnHeader2.Text = "Значение";
-            this.columnHeader2.Width = 118;
+            this.txtD.Location = new System.Drawing.Point(701, 134);
+            this.txtD.Name = "txtD";
+            this.txtD.Size = new System.Drawing.Size(100, 22);
+            this.txtD.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 457);
+            this.Controls.Add(this.txtD);
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
@@ -154,6 +163,7 @@
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.TextBox txtD;
     }
 }
 
