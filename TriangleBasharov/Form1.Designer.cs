@@ -39,6 +39,7 @@
             this.txtC = new System.Windows.Forms.TextBox();
             this.txtD = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Run_button
@@ -49,7 +50,7 @@
             this.Run_button.FlatAppearance.BorderSize = 10;
             this.Run_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Run_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
-            this.Run_button.Location = new System.Drawing.Point(287, 10);
+            this.Run_button.Location = new System.Drawing.Point(11, 240);
             this.Run_button.Margin = new System.Windows.Forms.Padding(2);
             this.Run_button.Name = "Run_button";
             this.Run_button.Size = new System.Drawing.Size(176, 94);
@@ -64,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(46, 7);
+            this.label1.Location = new System.Drawing.Point(597, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
@@ -77,10 +78,10 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(467, 10);
+            this.listView1.Location = new System.Drawing.Point(11, 11);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(343, 95);
+            this.listView1.Size = new System.Drawing.Size(445, 201);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -97,7 +98,7 @@
             // 
             // txtA
             // 
-            this.txtA.Location = new System.Drawing.Point(287, 109);
+            this.txtA.Location = new System.Drawing.Point(11, 216);
             this.txtA.Margin = new System.Windows.Forms.Padding(2);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(76, 20);
@@ -105,7 +106,7 @@
             // 
             // txtB
             // 
-            this.txtB.Location = new System.Drawing.Point(367, 109);
+            this.txtB.Location = new System.Drawing.Point(91, 216);
             this.txtB.Margin = new System.Windows.Forms.Padding(2);
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(76, 20);
@@ -113,7 +114,7 @@
             // 
             // txtC
             // 
-            this.txtC.Location = new System.Drawing.Point(446, 109);
+            this.txtC.Location = new System.Drawing.Point(171, 216);
             this.txtC.Margin = new System.Windows.Forms.Padding(2);
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(76, 20);
@@ -121,7 +122,7 @@
             // 
             // txtD
             // 
-            this.txtD.Location = new System.Drawing.Point(526, 109);
+            this.txtD.Location = new System.Drawing.Point(251, 216);
             this.txtD.Margin = new System.Windows.Forms.Padding(2);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(76, 20);
@@ -129,17 +130,29 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(606, 109);
+            this.textBox1.Location = new System.Drawing.Point(331, 216);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
+            this.textBox1.Size = new System.Drawing.Size(50, 20);
             this.textBox1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(8, 336);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(251, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Клик правой кнопкой мыши открывает форму 2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 371);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtD);
             this.Controls.Add(this.txtC);
@@ -171,6 +184,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
