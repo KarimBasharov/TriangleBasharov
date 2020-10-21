@@ -33,7 +33,7 @@ namespace TriangleBasharov
             a = Convert.ToDouble(txtA.Text);
             b = Convert.ToDouble(txtB.Text);
             c = Convert.ToDouble(txtC.Text);
-            r = Convert.ToDouble(txtD.Text); 
+            r = Convert.ToDouble(txtD.Text);
             Triangle triangle = new Triangle(a, b, c, r);
             listView1.Items.Add("Сторона a");
             listView1.Items.Add("Сторона b");

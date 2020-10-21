@@ -61,6 +61,13 @@ namespace TriangleBasharov
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
+        public double Pif1()
+        {
+            double pif = 0;
+            int s = 2;
+            pif = Math.Pow(a, s) + Math.Pow(b, s);
+            return pif;
+        }
         public double GetSetA
         {
             get
