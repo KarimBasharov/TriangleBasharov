@@ -13,18 +13,29 @@ namespace TriangleBasharov
 {
     public partial class Form2 : Form
     {
-        Button btn = new Button();
+        Button btn, btn2;
         ListView listView1 = new ListView();
         RadioButton r1;
         TextBox txtbox2, txtbox3, txtbox4, txtbox5;
         Label lbl;
-        //CheckBox c1, c2, c3;
+        Graphics gp;
+        Panel panel1;
+        Pen p = new Pen(Brushes.Black, 2);
+        //CheckBox c1;
         public Form2()
         {
             {
                 this.Height = 834;
                 this.Width = 410;
                 InitializeComponent();
+                panel1 = new Panel()
+                {
+                    Location = new Point(400, 100),
+                    Width = 200,
+                    Height = 100
+                };
+
+                gp = panel1.CreateGraphics();
                 //this.BackgroundImage = Image.FromFile("kletka.jpg");
 
                 btn = new Button
@@ -46,7 +57,7 @@ namespace TriangleBasharov
                 listView1.Columns.Add("Решение", -2, HorizontalAlignment.Left);
                 listView1.Height = 201;
                 listView1.Width = 370;
-                listView1.BackgroundImage = Image.FromFile("kletka.jpg");
+                //listView1.BackgroundImage = Image.FromFile("kletka.jpg");
                 this.Controls.Add(listView1);
 
                 r1 = new RadioButton
@@ -66,17 +77,14 @@ namespace TriangleBasharov
                 };
                 this.Controls.Add(txtbox2);
 
-                /*c2 = new CheckBox();
-                c2.Text = "b";
-                c2.Location = new Point(171, 216);
-                c2.Width = 76;
-                c2.Height = 20;
-
-                c3 = new CheckBox();
-                c3.Text = "c";
-                c3.Location = new Point(251, 216);
-                c3.Width = 76;
-                c3.Height = 20;*/
+                /*c1 = new CheckBox
+                {
+                    Text = "Нарисовать треугольник",
+                    Location = new Point(470, 345),
+                    Width = 200,
+                    Height = 20
+                };
+                this.Controls.Add(c1);*/
 
                 txtbox3 = new TextBox
                 {
@@ -109,8 +117,30 @@ namespace TriangleBasharov
                     Width = 72,
                     Height = 13
                 };
+
                 this.Controls.Add(lbl);
+                btn2 = new Button
+                {
+                    Text = "Нарисовать треугольник",
+                    Location = new Point(470, 345),
+                    Width = 150
+                };
+                btn2.Click += Btn2_Click;
+                this.Controls.Add(btn2);
+                this.Controls.Add(panel1);
             }
+        }
+
+        private void Btn2_Click(object sender, EventArgs e)
+        {
+
+            Point p1 = new Point(5, 90);
+            Point p2 = new Point(150, 90);
+            Point p3 = new Point(75, 1);
+
+            gp.DrawLine(p ,p1, p2);
+            gp.DrawLine(p, p2, p3);
+            gp.DrawLine(p, p3, p1);
         }
 
         private void R1_CheckedChanged(object sender, EventArgs e)
@@ -126,6 +156,8 @@ namespace TriangleBasharov
             listView1.Items.Add("Площадь");
             listView1.Items.Add("Высота");
             listView1.Items.Add("Найти c");
+            listView1.Items.Add("Найти a");
+            listView1.Items.Add("Найти b");
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -146,6 +178,9 @@ namespace TriangleBasharov
                 listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Surface()));
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Height()));
                 listView1.Items[7].SubItems.Add(Convert.ToString(triangle.Pif1()));
+                listView1.Items[8].SubItems.Add(Convert.ToString(triangle.Pif2()));
+                listView1.Items[9].SubItems.Add(Convert.ToString(triangle.Pif3()));
+                //listView1.Items[10].SubItems.Add(Convert.ToString(triangle.Sin()));
             }
             catch (FormatException)
             {

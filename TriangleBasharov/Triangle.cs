@@ -63,11 +63,37 @@ namespace TriangleBasharov
         }
         public double Pif1()
         {
+            double dat = 0;
             double pif = 0;
             int s = 2;
-            pif = Math.Pow(a, s) + Math.Pow(b, s);
+            dat = Math.Pow(a, s) + Math.Pow(b, s);
+            pif = Math.Sqrt(dat);
             return pif;
         }
+        public double Pif2()
+        {
+            double dat2 = 0;
+            double pif2 = 0;
+            int s = 2;
+            dat2 = Math.Pow(c, s) - Math.Pow(b, s);
+            pif2 = Math.Sqrt(dat2);
+            return pif2;
+        }
+        public double Pif3()
+        {
+            double dat3 = 0;
+            double pif3 = 0;
+            int s = 2;
+            dat3 = Math.Pow(c, s) - Math.Pow(a, s);
+            pif3 = Math.Sqrt(dat3);
+            return pif3;
+        }
+
+        /*public double Sinus()
+        {
+            double sinus = 0;
+            double alpha = 0;
+        }*/
         public double GetSetA
         {
             get
