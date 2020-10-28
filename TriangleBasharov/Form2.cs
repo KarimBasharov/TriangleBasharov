@@ -36,7 +36,7 @@ namespace TriangleBasharov
                 };
 
                 gp = panel1.CreateGraphics();
-                //this.BackgroundImage = Image.FromFile("kletka.jpg");
+                this.BackgroundImage = Image.FromFile("kletka.jpg");
 
                 btn = new Button
                 {
@@ -128,9 +128,18 @@ namespace TriangleBasharov
                 btn2.Click += Btn2_Click;
                 this.Controls.Add(btn2);
                 this.Controls.Add(panel1);
+                MainMenu menu = new MainMenu();
+                MenuItem menuitem1 = new MenuItem("File");
+                menuitem1.MenuItems.Add("Restart", new EventHandler(menuitem1_Restart));
+                menu.MenuItems.Add(menuitem1);
+                this.Menu = menu;
+
             }
         }
-
+        private void menuitem1_Restart(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
         private void Btn2_Click(object sender, EventArgs e)
         {
 
@@ -158,6 +167,9 @@ namespace TriangleBasharov
             listView1.Items.Add("Найти c");
             listView1.Items.Add("Найти a");
             listView1.Items.Add("Найти b");
+            listView1.Items.Add("альфа");
+            listView1.Items.Add("бета");
+            listView1.Items.Add("гамма");
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -180,6 +192,9 @@ namespace TriangleBasharov
                 listView1.Items[7].SubItems.Add(Convert.ToString(triangle.Pif1()));
                 listView1.Items[8].SubItems.Add(Convert.ToString(triangle.Pif2()));
                 listView1.Items[9].SubItems.Add(Convert.ToString(triangle.Pif3()));
+                listView1.Items[10].SubItems.Add(Convert.ToString(triangle.alpha()));
+                listView1.Items[11].SubItems.Add(Convert.ToString(triangle.beta()));
+                listView1.Items[12].SubItems.Add(Convert.ToString(triangle.gamma()));
                 //listView1.Items[10].SubItems.Add(Convert.ToString(triangle.Sin()));
             }
             catch (FormatException)

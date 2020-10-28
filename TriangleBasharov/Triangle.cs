@@ -40,7 +40,6 @@ namespace TriangleBasharov
         {
             return Convert.ToString(r);
         }
-
         public double Height() //нахождение высоты треугольника через радиус.
         {
             double h = 0;
@@ -65,35 +64,68 @@ namespace TriangleBasharov
         {
             double dat = 0;
             double pif = 0;
+            double okr = 0;
             int s = 2;
             dat = Math.Pow(a, s) + Math.Pow(b, s);
             pif = Math.Sqrt(dat);
-            return pif;
+            okr = Math.Round(pif);
+            return okr;
         }
         public double Pif2()
         {
             double dat2 = 0;
             double pif2 = 0;
+            double okr = 0;
             int s = 2;
             dat2 = Math.Pow(c, s) - Math.Pow(b, s);
             pif2 = Math.Sqrt(dat2);
-            return pif2;
+            okr = Math.Round(pif2);
+            return okr;
         }
         public double Pif3()
         {
             double dat3 = 0;
             double pif3 = 0;
+            double okr = 0;
             int s = 2;
             dat3 = Math.Pow(c, s) - Math.Pow(a, s);
             pif3 = Math.Sqrt(dat3);
-            return pif3;
+            okr = Math.Round(pif3);
+            return okr;
         }
-
-        /*public double Sinus()
+        public double alpha()
         {
-            double sinus = 0;
+            double alp = 0;
+            double gra = 0;
             double alpha = 0;
-        }*/
+            int s = 2;
+            alp = (Math.Pow(a, s) + Math.Pow(c, s) - Math.Pow(b, s)) / (2 * a * c);
+            gra = Math.Acos(Math.Cos(alp)) * (180.0 / Math.PI);
+            alpha = Math.Round(gra);
+            return alpha;
+        }
+        public double beta()
+        {
+            double bete = 0;
+            double gra = 0;
+            double beta = 0;
+            int s = 2;
+            bete = (Math.Pow(a, s) + Math.Pow(b, s) - Math.Pow(c, s)) / (2 * a * b);
+            gra = Math.Acos(Math.Cos(bete)) * (180.0 / Math.PI);
+            beta = Math.Round(gra);
+            return beta;
+        }
+        public double gamma()
+        {
+            double gam = 0;
+            double gra = 0;
+            double gamma = 0;
+            int s = 2;
+            gam = (Math.Pow(b, s) + Math.Pow(c, s) - Math.Pow(a, s)) / (2 * c * b);
+            gra = Math.Acos(Math.Cos(gam)) * (180.0 / Math.PI);
+            gamma = Math.Round(gra);
+            return gamma;
+        }
         public double GetSetA
         {
             get
