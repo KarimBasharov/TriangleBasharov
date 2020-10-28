@@ -126,6 +126,11 @@ namespace TriangleBasharov
             gamma = Math.Round(gra);
             return gamma;
         }
+        /*public double aCos()
+        {
+            double aCos = 0;
+            aCos = c * beta;
+        }*/
         public double GetSetA
         {
             get

@@ -32,7 +32,7 @@ namespace TriangleBasharov
                 {
                     Location = new Point(400, 100),
                     Width = 200,
-                    Height = 100
+                    Height = 200
                 };
 
                 gp = panel1.CreateGraphics();
@@ -71,10 +71,12 @@ namespace TriangleBasharov
 
                 txtbox2 = new TextBox
                 {
+                    Text = "Сторона а",
                     Location = new Point(91, 216),
                     Width = 76,
                     Height = 20
                 };
+                txtbox2.MouseClick += Txtbox2_MouseClick;
                 this.Controls.Add(txtbox2);
 
                 /*c1 = new CheckBox
@@ -88,26 +90,32 @@ namespace TriangleBasharov
 
                 txtbox3 = new TextBox
                 {
+                    Text = "Сторона b",
                     Location = new Point(171, 216),
                     Width = 76,
                     Height = 20
                 };
+                txtbox3.MouseClick += Txtbox2_MouseClick;
                 this.Controls.Add(txtbox3);
 
                 txtbox4 = new TextBox
                 {
+                    Text = "Сторона c",
                     Location = new Point(251, 216),
                     Width = 76,
                     Height = 20
                 };
+                txtbox4.MouseClick += Txtbox2_MouseClick;
                 this.Controls.Add(txtbox4);
 
                 txtbox5 = new TextBox
                 {
+                    Text = "Радиус r",
                     Location = new Point(331, 216),
                     Width = 50,
                     Height = 20
                 };
+                txtbox5.MouseClick += Txtbox2_MouseClick;
                 this.Controls.Add(txtbox5);
 
                 lbl = new Label
@@ -136,6 +144,13 @@ namespace TriangleBasharov
 
             }
         }
+
+        private void Txtbox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            TextBox box = sender as TextBox;
+            box.Text = String.Empty;
+        }
+
         private void menuitem1_Restart(object sender, EventArgs e)
         {
             Application.Restart();
@@ -164,12 +179,12 @@ namespace TriangleBasharov
             listView1.Items.Add("Периметр");
             listView1.Items.Add("Площадь");
             listView1.Items.Add("Высота");
-            listView1.Items.Add("Найти c");
-            listView1.Items.Add("Найти a");
-            listView1.Items.Add("Найти b");
             listView1.Items.Add("альфа");
             listView1.Items.Add("бета");
             listView1.Items.Add("гамма");
+            listView1.Items.Add("Найти c");
+            listView1.Items.Add("Найти a");
+            listView1.Items.Add("Найти b");
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -189,12 +204,12 @@ namespace TriangleBasharov
                 listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Perimeter()));
                 listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Surface()));
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Height()));
-                listView1.Items[7].SubItems.Add(Convert.ToString(triangle.Pif1()));
-                listView1.Items[8].SubItems.Add(Convert.ToString(triangle.Pif2()));
-                listView1.Items[9].SubItems.Add(Convert.ToString(triangle.Pif3()));
-                listView1.Items[10].SubItems.Add(Convert.ToString(triangle.alpha()));
-                listView1.Items[11].SubItems.Add(Convert.ToString(triangle.beta()));
-                listView1.Items[12].SubItems.Add(Convert.ToString(triangle.gamma()));
+                listView1.Items[7].SubItems.Add(Convert.ToString(triangle.alpha()));
+                listView1.Items[8].SubItems.Add(Convert.ToString(triangle.beta()));
+                listView1.Items[9].SubItems.Add(Convert.ToString(triangle.gamma()));
+                listView1.Items[10].SubItems.Add(Convert.ToString(triangle.Pif1()));
+                listView1.Items[11].SubItems.Add(Convert.ToString(triangle.Pif2()));
+                listView1.Items[12].SubItems.Add(Convert.ToString(triangle.Pif3()));
                 //listView1.Items[10].SubItems.Add(Convert.ToString(triangle.Sin()));
             }
             catch (FormatException)
